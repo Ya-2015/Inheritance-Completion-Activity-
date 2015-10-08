@@ -1,7 +1,7 @@
 package InheritanceC;
 import java.text.NumberFormat;
 
-public class Product {
+public abstract class Product {
 	private String code;
     private String description;
     private double price;
