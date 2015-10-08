@@ -41,17 +41,13 @@ public class Product {
     }
     
     public boolean equals(Object obj){
-    	boolean equal = true;
-    	if (obj instanceof Product){
-    		if(obj.getClass() == this.getClass()){
-    			equal = true;
-    		}else{
-    			equal = false;
-    		}
-    		
+    	Product p = (Product)obj;
+    	if(p.code.equals(code) && p.description.equals(description) && p.price == price ){
+    		return true;
     	}
-    	
-    	return equal;
+    	else{
+    		return false;
+    	}
     }
     
 }

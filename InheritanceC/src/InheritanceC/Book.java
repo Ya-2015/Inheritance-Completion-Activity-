@@ -36,16 +36,13 @@ public class Book extends Product{
     }
 	
 	public boolean equals(Object obj){
-    	boolean equal = true;
-    	if (obj instanceof Book){
-    		if(obj.getClass() == this.getClass()){
-    			equal = true;
-    		}else{
-    			equal = false;
-    		}
-    		
-    	}
-    	
-    	return equal;
-    }
+		Book b = (Book)obj;
+		
+		if(super.equals(obj) && b.author.equals(author) && b.pages == pages){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 }

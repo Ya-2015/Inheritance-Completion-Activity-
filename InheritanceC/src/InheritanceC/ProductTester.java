@@ -14,6 +14,13 @@ public class ProductTester {
 		System.out.println(b.whoAmI());
 		System.out.println(s.whoAmI());
 		
+		Book b1 = new Book();
+		Book b2 = new Book();
+		b2.setAuthor("Liu");
+		Software s1 = new Software();
+		Software s2 = new Software();
+		System.out.println(b1.equals(b2));
+		System.out.println(s1.equals(s2));
 		
 	}
 	

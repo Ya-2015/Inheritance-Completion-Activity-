@@ -45,16 +45,13 @@ public class Software extends Product{
     }
 	
 	public boolean equals(Object obj){
-    	boolean equal = true;
-    	if (obj instanceof Software){
-    		if(obj.getClass() == this.getClass()){
-    			equal = true;
-    		}else{
-    			equal = false;
-    		}
-    		
-    	}
-    	
-    	return equal;
-    }
+		Software s = (Software)obj;
+		
+		if(super.equals(obj) && s.programmer.equals(programmer) && s.platform.equals(platform) && s.os.equals(os)){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 }
