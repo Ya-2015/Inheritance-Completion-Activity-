@@ -4,11 +4,13 @@ public final class Software extends Product{
 	private String programmer;
     private String platform; //linux, mac, or pc
     private String os; 
+    private static final String DETAIL = "detail";
     
     public Software(){
     	programmer = "xxx";
     	platform = "xxx";
     	os = "Windows";
+    	count++;
     }
 
 	public String getProgrammer() {
@@ -35,9 +37,14 @@ public final class Software extends Product{
 		this.os = os;
 	}
 	
-	public String toString()
+	public String toString(String flag)
     {
-        return super.toString() + "Programmer:        " + programmer + "\n" + "Platform:        " + platform + "\n" + "os:        " + os + "\n";
+		if (flag.equalsIgnoreCase(DETAIL)){
+        
+			return super.toString() + "Programmer:        " + programmer + "\n" + "Platform:        " + platform + "\n" + "os:        " + os + "\n";
+		}else{
+			return super.toString();
+		}
     }
 	
 	public String whoAmI(){

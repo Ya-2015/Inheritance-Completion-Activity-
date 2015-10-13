@@ -3,6 +3,7 @@ package InheritanceC;
 public final class Book extends Product{
 	private String author;
     private int pages;
+    private static final String DETAIL = "detail";
     
     public Book(){
     	author = "001";
@@ -26,9 +27,14 @@ public final class Book extends Product{
 		this.pages = pages;
 	}
 	
-	public String toString()
+	public String toString(String flag)
     {
-        return super.toString() + "Author:        " + author + "\n" + "Pages:        " + pages + "\n";
+        if (flag.equalsIgnoreCase(DETAIL)){
+        	return super.toString() + "Author:        " + author + "\n" + "Pages:        " + pages + "\n";
+		}else{
+			return super.toString();
+		}
+        
     }
 	
 	public String whoAmI(){
